@@ -1,0 +1,17 @@
+<h1> <%= @list.name %> </h1>
+<ul>
+  <% @list.movies.each do |movie| %>
+  <h3><%= movie.title %></h3>
+  <br>
+  <p><%= movie.overview %></p>
+  <%= movie.poster_url %>
+  <%= movie.rating %>
+  <br>
+  <br>
+  <% end %>
+</ul>
+
+    <%# title: movie['title'],
+    overview: movie['overview'],
+    poster_url: "https://image.tmdb.org/t/p/original#{movie['poster_path']}",
+    rating: movie['vote_average'] %>
